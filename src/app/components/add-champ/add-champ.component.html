@@ -1,0 +1,11 @@
+<!--
+
+Programmer:  Ryan Admire                                           
+File:        add-champ.component.html                                 
+Description: The html page where the user can add a new champion
+             to their roster.
+
+-->
+
+<!-- Choose a champ from the drop down menu -->
+<p-dropdown [options]="champs" [(ngModel)]="selectedChamp" [filter]="true"></p-dropdown>
