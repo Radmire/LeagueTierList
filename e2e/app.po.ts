@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class TierListPage {
+export class LeagueTierListPage {
   navigateTo() {
     return browser.get('/');
   }

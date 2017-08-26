@@ -1,10 +1,10 @@
-import { TierListPage } from './app.po';
+import { LeagueTierListPage } from './app.po';
 
-describe('tier-list App', () => {
-  let page: TierListPage;
+describe('league-tier-list App', () => {
+  let page: LeagueTierListPage;
 
   beforeEach(() => {
-    page = new TierListPage();
+    page = new LeagueTierListPage();
   });
 
   it('should display welcome message', () => {

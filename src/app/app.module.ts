@@ -18,16 +18,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { RosterComponent } from './components/roster/roster.component';
 import { TierListComponent } from './components/tier-list/tier-list.component';
 import { AddChampComponent } from './components/add-champ/add-champ.component';
+import { HomeComponent } from './components/home/home.component';
 
 //primeng and other styling pieces
-import { DropdownModule } from '../../node_modules/primeng/primeng';
+import { DropdownModule, ButtonModule, InputTextModule, DataListModule } from '../../node_modules/primeng/primeng';
+
 
 //the routes for our application
 //or how we will navigate to the different components
 const appRoutes: Routes =[
-  {path: '', component: AddChampComponent},
+  {path: '', component: HomeComponent},
+  {path: 'addChamp', component:AddChampComponent},
   {path: 'roster', component: RosterComponent},
-  {path: 'tierList', component: TierListComponent},
+  {path: 'tierList', component: TierListComponent}
 ];
 
 @NgModule({
@@ -35,14 +38,18 @@ const appRoutes: Routes =[
     AppComponent,
     RosterComponent,
     TierListComponent,
-    AddChampComponent
+    AddChampComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
     DropdownModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ButtonModule,
+    InputTextModule,
+    DataListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

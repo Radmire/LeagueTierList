@@ -9,3 +9,27 @@ Description: The html page where the user can add a new champion
 
 <!-- Choose a champ from the drop down menu -->
 <p-dropdown [options]="champs" [(ngModel)]="selectedChamp" [filter]="true"></p-dropdown>
+<p-dropdown [options]="roles" [(ngModel)]="selectedRole"></p-dropdown>
+<button pButton (click)="addChamp()" label="Add"></button>
+<p-header>
+    Champ Pool
+</p-header>
+<ng-template let-champ let-i="index" pTemplate="item">
+    <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px;border-bottom:1px solid #D5D5D5;">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-3" style="text-align:center"><img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/{{champPool[i].name}}.png"></div>
+            <div class="ui-grid-col-9">
+                <div class="ui-grid ui-grid-responsive ui-fluid">
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-2">Name </div>
+                        <div class="ui-grid-col-10">{{champPool[i].display}}</div>
+                    </div>
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-2">Role: </div>
+                        <div class="ui-grid-col-10">{{champPool[i].role}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
