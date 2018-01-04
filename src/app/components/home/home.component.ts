@@ -3,7 +3,9 @@
 import { Component, OnInit } from '@angular/core';
 
 //imports
-import {Router} from  "@angular/router"; //user the router to navigate to the next page
+import { Router } from  "@angular/router"; //user the router to navigate to the next page
+import { Observable } from 'rxjs/Rx';
+import { RitoApiService } from "../../services/rito-api.service"
 
 @Component({
   selector: 'app-home',
@@ -14,8 +16,9 @@ export class HomeComponent implements OnInit {
 
   region: string
   summoner: string
+  accountId: string
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private rito: RitoApiService) { }
 
   ngOnInit() {
   }
@@ -30,7 +33,9 @@ export class HomeComponent implements OnInit {
       //navigate to the add champ to roster page
       console.log(this.summoner);
       console.log(this.region);
-      this.router.navigate(["/addChamp"]);
+      var accountId;
+      this.rito.getAccountId(this.summoner, this.region.toLowerCase()).subscribe(data => this.accountId = data);
+      this.router.navigate(["/tierList"]);
   }
 
 }

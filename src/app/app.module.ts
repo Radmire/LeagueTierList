@@ -13,12 +13,16 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { HttpModule } from '@angular/http';
 
 //the components of the application
 import { RosterComponent } from './components/roster/roster.component';
 import { TierListComponent } from './components/tier-list/tier-list.component';
 import { AddChampComponent } from './components/add-champ/add-champ.component';
 import { HomeComponent } from './components/home/home.component';
+
+//services for the application
+import { RitoApiService } from "./services/rito-api.service";
 
 //primeng and other styling pieces
 import { DropdownModule, ButtonModule, InputTextModule, DataListModule } from '../../node_modules/primeng/primeng';
@@ -49,9 +53,10 @@ const appRoutes: Routes =[
     BrowserAnimationsModule,
     ButtonModule,
     InputTextModule,
-    DataListModule
+    DataListModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [RitoApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

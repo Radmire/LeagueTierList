@@ -16,8 +16,8 @@
             <h3>Create Your Own Meta!</h3>
             <br>
             <form>
-                <input type="text" pInputText class="btn btn-light btn-lg" placeholder="Enter your summoner name!" [(ngModel)]="summoner" required>
-                <select class="btn btn-light btn-lg" [(ngModel)]="region" required>
+                <input type="text" pInputText class="btn btn-light btn-lg" placeholder="Enter your summoner name!" [(ngModel)]="summoner" name="summoner" required>
+                <select class="btn btn-light btn-lg" [(ngModel)]="region"  name="region" required>
                     <option>NA</option>
                     <option>BR</option>
                     <option>EUNE</option>
@@ -30,7 +30,7 @@
                     <option>SEA</option>
                     <option>KR</option>
                 </select>
-                <button pButton (click)="nextPage()" class="btn btn-light btn-lg">Sign Up</button>
+                <button pButton (click)="nextPage()" class="btn btn-light btn-lg" label="Sign Up"></button>
             </form>
         </div>
     </header>
