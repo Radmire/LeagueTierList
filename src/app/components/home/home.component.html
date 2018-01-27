@@ -1,0 +1,113 @@
+<!-- ADD COMMENT PREAMBLE -->
+
+<head>
+    <title>LoL: Personal Tier List</title>
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Needs form validation -->
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>League of Legends: Personal Tier List</h1>
+            <h3>Create Your Own Meta!</h3>
+            <br>
+            <form>
+                <input type="text" pInputText class="btn btn-light btn-lg" placeholder="Enter your summoner name!" [(ngModel)]="summoner" name="summoner" required>
+                <select class="btn btn-light btn-lg" [(ngModel)]="region"  name="region" required>
+                    <option>NA</option>
+                    <option>BR</option>
+                    <option>EUNE</option>
+                    <option>EUW</option>
+                    <option>LAN</option>
+                    <option>LAS</option>
+                    <option>OCE</option>
+                    <option>RU</option>
+                    <option>TR</option>
+                    <option>SEA</option>
+                    <option>KR</option>
+                </select>
+                <button pButton (click)="nextPage()" class="btn btn-light btn-lg" label="Sign Up"></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Features</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Always Available</strong>
+                                </h4>
+                                <p>Online or off, you can always access and update your tier list.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Blaze Your Own Trail</strong>
+                                </h4>
+                                <p>Take the stress out of champ select and make the pick that's best for YOU!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Calculator Mode</strong>
+                                </h4>
+                                <p>We examine not only your stats on the selected champ and role; but also the stats from your region.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Contact Info</strong>
+                    </h4>
+                    <p>301 Southpointe Dr APT D
+                        <br>Edwardsville, IL 62025</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-github fa-fw"></i><a href="https://github.com/Radmire">My Github</a></li>
+                        <li><i class="fa fa-phone fa-fw"></i> (618) 444-2614</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i><a href="mailto:ryancadmire@gmail.com">ryancadmire@gmail.com</a></li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Ryan Admire 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
